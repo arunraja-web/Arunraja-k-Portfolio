@@ -6,8 +6,7 @@ const education = [
     institution: "AAA College of Engineering and Technology,Sivakasi.",
     degree: "B.E - Computer Science and Engineering",
     duration: "2023 - 2027",
-    description: "Pursuing undergraduate degree with focus on software development, data structures, and algorithms.
-                  CGPA: 8.0 ",
+    description: "Pursuing undergraduate degree with focus on software development, data structures, and algorithms  CGPA: 8.0 ",
     icon: GraduationCap,
   },
   {
