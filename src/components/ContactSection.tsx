@@ -15,9 +15,16 @@ const ContactSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const subject = `Message from ${formData.name}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    const mailtoLink = `mailto:rarun6706@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    window.open(mailtoLink, '_blank');
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: "Email Client Opened!",
+      description: "Please send the message from your email client.",
     });
     setFormData({ name: "", email: "", message: "" });
   };
@@ -47,7 +54,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">rarun6706@email.com</p>
+                  <p className="font-medium">rarun6706@gmail.com</p>
                 </div>
               </div>
 
@@ -57,7 +64,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="font-medium">+91 9488681492</p>
+                  <p className="font-medium">+1 234 567 890</p>
                 </div>
               </div>
 
@@ -67,7 +74,7 @@ const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">Kovilpatti , Tamilnadu</p>
+                  <p className="font-medium">Your City, Country</p>
                 </div>
               </div>
             </div>
