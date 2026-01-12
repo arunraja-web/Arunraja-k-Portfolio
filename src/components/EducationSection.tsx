@@ -3,18 +3,19 @@ import { GraduationCap, School } from "lucide-react";
 const education = [
   {
     type: "College",
-    institution: "Your College Name",
-    degree: "Bachelor of Technology in Computer Science",
-    duration: "2020 - 2024",
-    description: "Completed undergraduate degree with focus on software development, data structures, and algorithms.",
+    institution: "AAA College of Engineering and Technology,Sivakasi.",
+    degree: "B.E - Computer Science and Engineering",
+    duration: "2023 - 2027",
+    description: "Pursuing undergraduate degree with focus on software development, data structures, and algorithms.
+                  CGPA: 8.0 ",
     icon: GraduationCap,
   },
   {
     type: "School",
-    institution: "Your School Name",
-    degree: "Higher Secondary Education (12th Grade)",
-    duration: "2018 - 2020",
-    description: "Completed higher secondary education with a focus on Science and Mathematics.",
+    institution: "Sri Kanna Matriculation Higher Secondary School, Kovilpatti.",
+    degree: "12th - Maths Computer Science Group",
+    duration: "2023",
+    description: "Completed higher secondary education with a focus on Computer Science and Mathematics.",
     icon: School,
   },
 ];
