@@ -8,7 +8,7 @@ import certificate5 from "@/assets/mango.png";
 import certificate6 from "@/assets/recsar.png";
 import certificate7 from "@/assets/oracl.png";
 import certificate8 from "@/assets/ibm.png";
-import certificate9 from "@/assets/rit.png";
+import certificate9 from "@/assets/Ebox.png";
 import certificate10 from "@/assets/hp.png";
 import certificate11 from "@/assets/orac.png";
 import certificate12 from "@/assets/dci.png";
@@ -26,7 +26,7 @@ const certificates = [
   { title: "Full Stack Development ", organization: "Reccsar", image: certificate6 },
   { title: "OCI Foundations Associate", organization: "Oracle", image: certificate7 },
   { title: "Introduction To RAG", organization: "IBM SkillsBuild", image: certificate8 },
-  { title: "RIT Participation", organization: "Rajalakshmi Institute of Technology", image: certificate9 },
+  { title: "Problem solving and Programming in C", organization: "eBox", image: certificate9 },
   { title: "Data Science & Analytics", organization: "hp", image: certificate10 },
   { title: "OCI AI Foundations Associate", organization: "Oracle", image: certificate11 },
   { title: "Mobile App Development", organization: "Dot Com Infoway Ltd.", image: certificate12 },
