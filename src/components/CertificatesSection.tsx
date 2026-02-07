@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+
 import certificate1 from "@/assets/nptel.png";
 import certificate2 from "@/assets/oracle.png";
 import certificate3 from "@/assets/ai intern.png";
@@ -17,31 +18,37 @@ import certificate14 from "@/assets/hr.png";
 import certificate15 from "@/assets/tata.png";
 import certificate16 from "@/assets/goo.png";
 
+/* 🔥 ALL CERTIFICATES LIST */
 const certificates = [
-  { title: "Cloud computing", organization: "NPTEL", image: certificate1 },
+  { title: "Cloud Computing", organization: "NPTEL", image: certificate1 },
   { title: "OCI Developer Professional", organization: "Oracle", image: certificate2 },
   { title: "AI Internship", organization: "Codec Technologies", image: certificate3 },
   { title: "AWS Cloud", organization: "Amazon Web Services", image: certificate4 },
   { title: "MongoDB Basics", organization: "MongoDB", image: certificate5 },
-  { title: "Full Stack Development ", organization: "Reccsar", image: certificate6 },
+  { title: "Full Stack Development", organization: "Reccsar", image: certificate6 },
   { title: "OCI Foundations Associate", organization: "Oracle", image: certificate7 },
   { title: "Introduction To RAG", organization: "IBM SkillsBuild", image: certificate8 },
-  { title: "Problem solving and Programming in C", organization: "eBox", image: certificate9 },
-  { title: "Data Science & Analytics", organization: "hp", image: certificate10 },
+  { title: "Problem Solving & Programming in C", organization: "eBox", image: certificate9 },
+  { title: "Data Science & Analytics", organization: "HP", image: certificate10 },
   { title: "OCI AI Foundations Associate", organization: "Oracle", image: certificate11 },
   { title: "Mobile App Development", organization: "Dot Com Infoway Ltd.", image: certificate12 },
-  { title: "Ethical Considerations For Generative AI", organization: "IBM SkillsBuild", image: certificate13 },
-  { title: "SQL Advanced", organization: "Hackerrank", image: certificate14 },
+  { title: "Ethical Considerations for Generative AI", organization: "IBM SkillsBuild", image: certificate13 },
+  { title: "SQL Advanced", organization: "HackerRank", image: certificate14 },
   { title: "Generative AI", organization: "TATA", image: certificate15 },
-  { title: "Digital Transfromation with Google Cloud", organization: "Google Cloud", image: certificate16 },
+  { title: "Digital Transformation with Google Cloud", organization: "Google Cloud", image: certificate16 },
 ];
 
 const CertificatesSection = () => {
-  const [selectedCert, setSelectedCert] = useState<{ title: string; organization: string; image: string } | null>(null);
+  const [selectedCert, setSelectedCert] = useState<{
+    title: string;
+    organization: string;
+    image: string;
+  } | null>(null);
 
   return (
     <section id="certificates" className="py-20 bg-background">
       <div className="container mx-auto px-6">
+        {/* HEADER */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
             My <span className="text-primary">Certificates</span>
@@ -49,8 +56,9 @@ const CertificatesSection = () => {
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
+        {/* 🔥 SHOW ONLY 6 CERTIFICATES */}
         <div className="flex flex-wrap justify-center gap-6">
-          {certificates.map((cert, index) => (
+          {certificates.slice(0, 6).map((cert, index) => (
             <div
               key={index}
               onClick={() => setSelectedCert(cert)}
@@ -63,6 +71,7 @@ const CertificatesSection = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
               </div>
+
               <div className="p-4">
                 <h3 className="font-semibold text-center text-foreground group-hover:text-primary transition-colors">
                   {cert.title}
@@ -71,13 +80,14 @@ const CertificatesSection = () => {
                   {cert.organization}
                 </p>
               </div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* 🔍 LIGHTBOX MODAL */}
       {selectedCert && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm animate-fade-in"
@@ -99,9 +109,14 @@ const CertificatesSection = () => {
               alt={selectedCert.title}
               className="max-w-full max-h-[80vh] object-contain rounded-xl border border-border shadow-2xl shadow-primary/20"
             />
+
             <div className="text-center mt-4">
-              <h3 className="text-xl font-semibold text-foreground">{selectedCert.title}</h3>
-              <p className="text-muted-foreground">{selectedCert.organization}</p>
+              <h3 className="text-xl font-semibold text-foreground">
+                {selectedCert.title}
+              </h3>
+              <p className="text-muted-foreground">
+                {selectedCert.organization}
+              </p>
             </div>
           </div>
         </div>
