@@ -8,6 +8,7 @@ const navLinks = [
   { name: "Education", href: "#education" },
   { name: "Internships", href: "#internships" },
   { name: "Certificates", href: "#certificates" },
+  { name: "Badges", href: "#badges" },          // ✅ ADDED
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
@@ -46,12 +47,13 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          {/* LOGO */}
           <a href="#home" className="text-2xl font-bold font-display">
             <span className="text-primary">MY </span>
             <span className="text-foreground">PORTFOLIO</span>
           </a>
 
-          {/* Desktop Navigation */}
+          {/* DESKTOP NAV */}
           <div className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <button
@@ -68,7 +70,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* MOBILE MENU BUTTON */}
           <button
             className="md:hidden text-foreground"
             onClick={() => setIsOpen(!isOpen)}
@@ -77,7 +79,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* MOBILE NAV */}
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4">
             <div className="flex flex-col gap-2">
