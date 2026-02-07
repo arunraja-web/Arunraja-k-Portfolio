@@ -6,16 +6,40 @@ import oracle from "@/assets/oracle.png";
 import dci from "@/assets/dci.png";
 import ibm from "@/assets/ibm.png";
 import ebox from "@/assets/Ebox.png";
-import aiintern from "@/assets/mern.png";
+import mern from "@/assets/mern.png";
 
 /* 🎯 ONLY REQUIRED 6 CERTIFICATES */
 const certificates = [
-  { title: "Cloud Computing", organization: "NPTEL", image: nptel },
-  { title: "OCI Developer Professional", organization: "Oracle", image: oracle },
-  { title: "Mobile App Development", organization: "Dot Com Infoway Ltd.", image: dci },
-  { title: "Introduction to RAG", organization: "IBM SkillsBuild", image: ibm },
-  { title: "Problem Solving & Programming in C", organization: "eBox", image: ebox },
-  { title: "Mern Stack Development ", organization: "Codec Technologies", image: mern },
+  {
+    title: "Cloud Computing",
+    organization: "NPTEL",
+    image: nptel,
+  },
+  {
+    title: "OCI Developer Professional",
+    organization: "Oracle",
+    image: oracle,
+  },
+  {
+    title: "Mobile App Development",
+    organization: "Dot Com Infoway Ltd.",
+    image: dci,
+  },
+  {
+    title: "Introduction to RAG",
+    organization: "IBM SkillsBuild",
+    image: ibm,
+  },
+  {
+    title: "Problem Solving & Programming in C",
+    organization: "eBox",
+    image: ebox,
+  },
+  {
+    title: "MERN Stack Development",
+    organization: "Codec Technologies",
+    image: mern,
+  },
 ];
 
 const CertificatesSection = () => {
