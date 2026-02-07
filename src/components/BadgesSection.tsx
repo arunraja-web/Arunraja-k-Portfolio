@@ -9,7 +9,7 @@ import google from "@/assets/3.png";
 const badges = [
   {
     title: "Introduction to RAG",
-    platform: "IBM SkillsBuild",",
+    platform: "IBM SkillsBuild",
     image: aws,
   },
   {
