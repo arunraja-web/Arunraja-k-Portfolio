@@ -1,16 +1,19 @@
-import aws from "@/assets/1.png";
+import { useState } from "react";
+import { X } from "lucide-react";
+
+import aws from "@/assets/5.png";
 import oracle from "@/assets/2.png";
-import ibm from "@/assets/3.png";
-import google from "@/assets/4.png";
+import ibm from "@/assets/4.png";
+import google from "@/assets/3.png";
 
 const badges = [
   {
-    title: "AWS Cloud Foundations",
-    platform: "Amazon Web Services",
+    title: "Introduction to RAG",
+    platform: "IBM SkillsBuild",",
     image: aws,
   },
   {
-    title: "Oracle Cloud Infrastructure",
+    title: "OCI Developer Professional",
     platform: "Oracle",
     image: oracle,
   },
@@ -20,13 +23,19 @@ const badges = [
     image: ibm,
   },
   {
-    title: "Google Cloud Digital Leader",
-    platform: "Google Cloud",
+    title: "OCI AI Foundstions Associate",
+    platform: "Oracle",
     image: google,
   },
 ];
 
 const BadgesSection = () => {
+  const [selectedBadge, setSelectedBadge] = useState<{
+    title: string;
+    platform: string;
+    image: string;
+  } | null>(null);
+
   return (
     <section id="badges" className="py-20 bg-background">
       <div className="container mx-auto px-6">
@@ -43,7 +52,8 @@ const BadgesSection = () => {
           {badges.map((badge, index) => (
             <div
               key={index}
-              className="w-[200px] bg-card border border-border rounded-xl p-5 text-center hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10"
+              onClick={() => setSelectedBadge(badge)}
+              className="w-[200px] bg-card border border-border rounded-xl p-5 text-center cursor-pointer hover:border-primary transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/10"
             >
               <img
                 src={badge.image}
@@ -62,6 +72,43 @@ const BadgesSection = () => {
           ))}
         </div>
       </div>
+
+      {/* 🔍 BADGE MODAL */}
+      {selectedBadge && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm"
+          onClick={() => setSelectedBadge(null)}
+        >
+          {/* CLOSE BUTTON */}
+          <button
+            onClick={() => setSelectedBadge(null)}
+            className="absolute top-6 right-6 p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
+          {/* MODAL CONTENT */}
+          <div
+            className="relative max-w-[90vw] max-h-[90vh]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img
+              src={selectedBadge.image}
+              alt={selectedBadge.title}
+              className="max-w-full max-h-[70vh] object-contain rounded-xl border shadow-2xl"
+            />
+
+            <div className="text-center mt-4">
+              <h3 className="text-xl font-semibold">
+                {selectedBadge.title}
+              </h3>
+              <p className="text-muted-foreground">
+                {selectedBadge.platform}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
