@@ -1,41 +1,21 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 
-import certificate1 from "@/assets/nptel.png";
-import certificate2 from "@/assets/oracle.png";
-import certificate3 from "@/assets/ai intern.png";
-import certificate4 from "@/assets/aws.png";
-import certificate5 from "@/assets/mango.png";
-import certificate6 from "@/assets/recsar.png";
-import certificate7 from "@/assets/oracl.png";
-import certificate8 from "@/assets/ibm.png";
-import certificate9 from "@/assets/Ebox.png";
-import certificate10 from "@/assets/hp.png";
-import certificate11 from "@/assets/orac.png";
-import certificate12 from "@/assets/dci.png";
-import certificate13 from "@/assets/ibm1.png";
-import certificate14 from "@/assets/hr.png";
-import certificate15 from "@/assets/tata.png";
-import certificate16 from "@/assets/goo.png";
+import nptel from "@/assets/nptel.png";
+import oracle from "@/assets/oracle.png";
+import dci from "@/assets/dci.png";
+import ibm from "@/assets/ibm.png";
+import ebox from "@/assets/Ebox.png";
+import aiintern from "@/assets/ai intern.png";
 
-/* 🔥 ALL CERTIFICATES LIST */
+/* 🎯 ONLY REQUIRED 6 CERTIFICATES */
 const certificates = [
-  { title: "Cloud Computing", organization: "NPTEL", image: certificate1 },
-  { title: "OCI Developer Professional", organization: "Oracle", image: certificate2 },
-  { title: "AI Internship", organization: "Codec Technologies", image: certificate3 },
-  { title: "AWS Cloud", organization: "Amazon Web Services", image: certificate4 },
-  { title: "MongoDB Basics", organization: "MongoDB", image: certificate5 },
-  { title: "Full Stack Development", organization: "Reccsar", image: certificate6 },
-  { title: "OCI Foundations Associate", organization: "Oracle", image: certificate7 },
-  { title: "Introduction To RAG", organization: "IBM SkillsBuild", image: certificate8 },
-  { title: "Problem Solving & Programming in C", organization: "eBox", image: certificate9 },
-  { title: "Data Science & Analytics", organization: "HP", image: certificate10 },
-  { title: "OCI AI Foundations Associate", organization: "Oracle", image: certificate11 },
-  { title: "Mobile App Development", organization: "Dot Com Infoway Ltd.", image: certificate12 },
-  { title: "Ethical Considerations for Generative AI", organization: "IBM SkillsBuild", image: certificate13 },
-  { title: "SQL Advanced", organization: "HackerRank", image: certificate14 },
-  { title: "Generative AI", organization: "TATA", image: certificate15 },
-  { title: "Digital Transformation with Google Cloud", organization: "Google Cloud", image: certificate16 },
+  { title: "Cloud Computing", organization: "NPTEL", image: nptel },
+  { title: "OCI Developer Professional", organization: "Oracle", image: oracle },
+  { title: "Mobile App Development", organization: "Dot Com Infoway Ltd.", image: dci },
+  { title: "Introduction to RAG", organization: "IBM SkillsBuild", image: ibm },
+  { title: "Problem Solving & Programming in C", organization: "eBox", image: ebox },
+  { title: "AI Internship", organization: "Codec Technologies", image: aiintern },
 ];
 
 const CertificatesSection = () => {
@@ -50,15 +30,15 @@ const CertificatesSection = () => {
       <div className="container mx-auto px-6">
         {/* HEADER */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-display mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             My <span className="text-primary">Certificates</span>
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto"></div>
         </div>
 
-        {/* 🔥 SHOW ONLY 6 CERTIFICATES */}
-        <div className="flex flex-wrap justify-center gap-6">
-          {certificates.slice(0, 6).map((cert, index) => (
+        {/* 🔥 3 x 2 GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center">
+          {certificates.map((cert, index) => (
             <div
               key={index}
               onClick={() => setSelectedCert(cert)}
@@ -73,7 +53,7 @@ const CertificatesSection = () => {
               </div>
 
               <div className="p-4">
-                <h3 className="font-semibold text-center text-foreground group-hover:text-primary transition-colors">
+                <h3 className="font-semibold text-center group-hover:text-primary transition-colors">
                   {cert.title}
                 </h3>
                 <p className="text-sm text-muted-foreground text-center mt-1">
@@ -90,28 +70,28 @@ const CertificatesSection = () => {
       {/* 🔍 LIGHTBOX MODAL */}
       {selectedCert && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/95 backdrop-blur-sm"
           onClick={() => setSelectedCert(null)}
         >
           <button
             onClick={() => setSelectedCert(null)}
-            className="absolute top-6 right-6 p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition-all duration-300 group"
+            className="absolute top-6 right-6 p-3 rounded-full bg-card border border-border hover:border-primary hover:bg-primary/10 transition"
           >
-            <X className="w-6 h-6 text-foreground group-hover:text-primary transition-colors" />
+            <X className="w-6 h-6" />
           </button>
 
           <div
-            className="relative max-w-[90vw] max-h-[90vh] animate-scale-in"
+            className="relative max-w-[90vw] max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}
           >
             <img
               src={selectedCert.image}
               alt={selectedCert.title}
-              className="max-w-full max-h-[80vh] object-contain rounded-xl border border-border shadow-2xl shadow-primary/20"
+              className="max-w-full max-h-[80vh] object-contain rounded-xl border shadow-2xl"
             />
 
             <div className="text-center mt-4">
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-xl font-semibold">
                 {selectedCert.title}
               </h3>
               <p className="text-muted-foreground">
