@@ -2,18 +2,18 @@ import { Briefcase, Calendar } from "lucide-react";
 
 const internships = [
   {
-    title: "Data Science Intern",
-    company: "Codsoft Pvt. Ltd. ",
-    period: "Dec 2025 - Jan 2026",
+    title: "FUll Stack AI Intern",
+    company: "Zelid Tech, Chennai. ",
+    period: "Jan 2026 - Apr 2026",
     description:
-      "Worked on data analysis and visualization by extracting insights from datasets using statistical and machine learning techniques.",
+      "skilled in frontend, backend, AI, and automation workflows. Passionate about building smart, scalable, and user-friendly applications..",
   },
   {
-    title: "Mern Stack Developer Intern",
-    company: "Codec Technologies,Mumbai",
-    period: "Dec 2025 - Jan 2026",
+    title: "Campus Ambassador ",
+    company: "eDc IIT Delhi",
+    period: "Dec 2025 - Feb 2026",
     description:
-      "Built RESTful APIs using Node.js and Express, integrated MongoDB databases, and created dynamic frontend interfaces.",
+      "Campus Ambassador for Entrepreneurship Development Cell IIT Delhi, promoting innovation, entrepreneurship, and student engagement initiatives.",
   },
   {
     title: "Mobile app Development Intern",
