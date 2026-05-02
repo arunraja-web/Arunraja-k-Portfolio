@@ -5,7 +5,7 @@ const skills = [
   { name: "JavaScript", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
   { name: "Git & Github", image: "https://tse1.explicit.bing.net/th/id/OIP._c0EZbkgQU8uTRZYeIALWgHaHa?w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3" },
   { name: "Python", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-  { name: "PowerBI", image: "https://logos-world.net/wp-content/uploads/2022/02/Microsoft-Power-BI-Symbol.png" },
+  { name: "PowerBI", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAS5j8jJB7JgNRGLczGcFCOxM4e_Ob7nTcFQ&s" },
   { name: "Figma", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
   { name: "Excel", image: "https://i1.wp.com/www.ardilu.com/wp-content/uploads/2020/06/Microsoft-Excel.png?ssl=1" },
   { name: "Java", image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
