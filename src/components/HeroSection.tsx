@@ -57,7 +57,7 @@ const HeroSection = () => {
                 className="font-semibold"
                 asChild
               >
-                <a href="/Arunraja K Resume.pdf" download>
+                <a href="/ARUN RESUME.pdf.pdf (2).pdf" download>
                   <Download className="mr-2 h-5 w-5" />
                   DOWNLOAD CV
                 </a>
