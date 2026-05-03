@@ -25,7 +25,7 @@ const projects = [
     description: "Automate the Attedance with BLE Beacon Module",
     image: project3,
     technologies: ["Java", "SQL", "Springboot", "Excel"],
-    github: "https://github.com/arunraja-web/Sales-Prediction-project.git",
+    github: "https://github.com/barath2901/BLE-Beacon-Tracking-Project.git",
     live: "#",
   },
 ];
