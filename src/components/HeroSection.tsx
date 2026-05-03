@@ -25,7 +25,7 @@ const HeroSection = () => {
               I'm <span className="text-primary">ARUNRAJA K</span>
             </h1>
             <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">
-              Mern Stack Developer | Data Analyst | Java Developer | UI&UX Designer
+              Mern Stack Developer | Data Analyst | Java Developer | UI&UX Designer | Freelancer 
             </h2>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               I'm a passionate developer with a keen eye for design and a love for creating 
@@ -57,7 +57,7 @@ const HeroSection = () => {
                 className="font-semibold"
                 asChild
               >
-                <a href="/Arunraja K Resume" download>
+                <a href="/Arunraja K Resume.pdf" download>
                   <Download className="mr-2 h-5 w-5" />
                   DOWNLOAD CV
                 </a>
