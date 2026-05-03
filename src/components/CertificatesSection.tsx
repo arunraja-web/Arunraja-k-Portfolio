@@ -6,7 +6,7 @@ import oracle from "@/assets/oracle.png";
 import dci from "@/assets/dci.png";
 import ibm from "@/assets/ibm.png";
 import ebox from "@/assets/Ebox.png";
-import mern from "@/assets/mern.png";
+import mern from "@/assets/Screenshot 2026-04-27 201939.png";
 
 /* 🎯 ONLY REQUIRED 6 CERTIFICATES */
 const certificates = [
@@ -36,8 +36,8 @@ const certificates = [
     image: ebox,
   },
   {
-    title: "MERN Stack Development",
-    organization: "Codec Technologies",
+    title: "Full Stack AI Intern",
+    organization: "Zelid Tech",
     image: mern,
   },
 ];
