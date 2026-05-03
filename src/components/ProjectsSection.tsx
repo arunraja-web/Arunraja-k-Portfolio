@@ -1,8 +1,8 @@
 import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import project1 from "@/assets/tic tac.avif";
-import project2 from "@/assets/ai.webp";
-import project3 from "@/assets/sales-dashboard_10.webp";
+import project1 from "@/assets/image.png";
+import project2 from "@/assets/Screenshot 2026-05-03 144355.png";
+import project3 from "@/assets/images (2).jpg";
 
 const projects = [
   {
@@ -17,7 +17,7 @@ const projects = [
     description: "Post the Documents from Drive could be Automates with Generative AI",
     image: project2,
     technologies: ["Python", "LLM", "javascript", "n8n"],
-    github: "https://github.com/arunraja-web/Codec-Technologies-AI-project.git",
+    github: "https://arundhano.app.n8n.cloud/workflow/UFvo0mby50fKq4Uh?projectId=bgy6uRYch7CHIvHb",
     live: "#",
   },
   {
